@@ -89,8 +89,8 @@ var (
 	DisableHostPortVersion = VersionRanges{VersionRange{MinVersion: Version{Major: 15, Minor: 1}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}}}
 	// HNS 15.4 allows for Modify Loadbalancer support
 	ModifyLoadbalancerVersion = VersionRanges{VersionRange{MinVersion: Version{Major: 15, Minor: 4}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}}}
-	// HNS 15.4 allows for Accelnet support
-	AccelnetVersion = VersionRanges{VersionRange{MinVersion: Version{Major: 15, Minor: 4}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}}}
+	// HNS 15.4 allows for Accelnet support, but use 15.3 as temporary hack to work with a version on ge_current_directbasebackport prior to the HNS version update
+	AccelnetVersion = VersionRanges{VersionRange{MinVersion: Version{Major: 15, Minor: 3}, MaxVersion: Version{Major: math.MaxInt32, Minor: math.MaxInt32}}}
 )
 
 // GetGlobals returns the global properties of the HCN Service.
